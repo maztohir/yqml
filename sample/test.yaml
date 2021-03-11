@@ -1,0 +1,6 @@
+select:
+- name: id
+- name: name
+- name: phone
+- name: address
+from: table.test_table

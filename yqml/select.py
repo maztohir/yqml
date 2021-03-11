@@ -1,5 +1,4 @@
 from yqml.keys import Keys
-from .from import From
 from .where import Where
 from .join import Join
 from .fields import Fields
@@ -28,3 +27,10 @@ class Select:
     def where_clause(self):
         return Where(self._content).to_raw_sql()
 
+class From:
+    def __init__(self, dict):
+        self._content = dict
+
+    def to_raw_sql(self):
+        table_id = self._content.get(Keys.FROM)
+        return f'FROM {table_id}'
