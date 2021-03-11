@@ -7,7 +7,7 @@ class Fields:
 
     def to_raw_sql(self):
         fields = self.extract_fields()
-        return ','.join(fields)
+        return ', '.join(fields)
 
     def extract_fields(self):
         fields = []

@@ -5,13 +5,13 @@ class Field:
         self._content = dict
 
     def to_raw_sql(self):
-        if self.source:
-            return f'{self.source} AS {self.field}'
+        if self.source != self.name:
+            return f'{self.source} AS {self.name}'
         else:
-            return self.field
+            return self.name
 
     @property
-    def field(self):
+    def name(self):
         return self._content.get(Keys.NAME)
     
     @property

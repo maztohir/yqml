@@ -3,4 +3,10 @@ select:
 - name: name
 - name: phone
 - name: address
-from: table.test_table
+from: test_table
+left-join: join_table USING (id)
+joins:
+  - left-join: join_table USING (id)
+  - left-join: join_table USING (id)
+  - left-join: join_table USING (id)
+where: "id = '23'"
