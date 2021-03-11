@@ -1,6 +1,6 @@
 from .keys import Keys
 from .select import Select
-from .cte import Cte
+# from .cte import Cte
 
 class Query:
 
@@ -21,10 +21,10 @@ class Query:
     
     def get_raw_sql(self):
         if self.is_simple_selection():
-            return Select(self._content)
+            return Select(self._content).to_sql()
 
-        if self.is_cte():
-            return Cte(self._content)
+        # if self.is_cte():
+        #     return Cte(self._content)
     
 
     #TODO:

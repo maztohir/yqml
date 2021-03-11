@@ -5,7 +5,7 @@ class Where:
         self._content = dict
 
     def to_raw_sql(self):
-        table_id = self._content.get(Keys.WHERE)
-        return f'WHERE {table_id}'
+        content = self._content.get(Keys.WHERE)
+        return f'WHERE {content}' if content else ''
 
     
