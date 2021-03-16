@@ -6,7 +6,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name="yqml",
-    version="0.0.1",
+    version="0.0.2",
     author="Muhamad Tohir",
     author_email="maztohir@gmail.com",
     description="YAML based query language",
