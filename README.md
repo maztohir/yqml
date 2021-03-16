@@ -28,6 +28,7 @@ By using YQML, you write the Query in YAML format and it's transformable into SQ
   <td>
 
   ```sql
+  -- simple syntax
   SELECT
     id, 
     name,
@@ -52,6 +53,7 @@ By using YQML, you write the Query in YAML format and it's transformable into SQ
   <td>
 
   ```sql
+  -- syntax with CTE
   WITH
   raw_data AS (
   SELECT
@@ -100,6 +102,7 @@ By using YQML, you write the Query in YAML format and it's transformable into SQ
   <td>
 
   ```sql
+  -- syntax with complex templating/function
   WITH
   scd_type2_raw AS (
   SELECT
@@ -159,6 +162,16 @@ engine = YQML(content, engine='bigquery')
 sql = engine.to_sql()
 print(sql)
 ```
+
+## What's supported now
+- Supporting simple SQL (Select, From, Where, Join)
+
+## TODO
+- Supporting CTE
+- Supporting MERGE
+- Supporting Scripting
+- Better to handling multiple JOIN statement
+- Supporting function import / tmplating
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
